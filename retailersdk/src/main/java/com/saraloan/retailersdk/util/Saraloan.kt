@@ -42,12 +42,12 @@ class Saraloan {
         return this
     }
 
-    fun launch(context: Context?, mobile: Editable) {
-        SharedPrefsUtil.mobile = mobile.toString()
+    fun launch(context: Context?, mobile: String) {
+        SharedPrefsUtil.mobile = mobile
         getSession(context, mobile)
     }
 
-    fun getSession(context: Context?, mobile: Editable) {
+    fun getSession(context: Context?, mobile: String) {
         var url = URL(Constants.PROD_API_URL + Constants.urls["embed_session"])
         var retrofit = Retrofit.Builder().baseUrl(Constants.PROD_API_URL)
             .addConverterFactory(GsonConverterFactory.create())

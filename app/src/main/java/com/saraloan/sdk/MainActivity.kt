@@ -34,6 +34,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun openSdk() {
-        Saraloan.instance.launch(this, mobile.text)
+        Saraloan.instance.launch(this, mobile.text.toString())
     }
 }
